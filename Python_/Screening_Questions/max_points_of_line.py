@@ -47,6 +47,19 @@ def max_points(points: List[List[int]]) -> int:
 result = max_points([[1, 1], [2, 2], [3, 3]])
 print(result) # 3
 
+
+"""
+1.Initialize a variable to store the maximum number of points on the same line, initially set to 1.
+2.Iterate through each point (P1) in the given list of points.
+3. For each point (P1), initialize a hash map to store the count of points with the same slope.
+4. For each subsequent point (P2) in the list of points, excluding P1, calculate the slope between P1 and P2.
+5. Store the slope in the hash map, incrementing the count for that slope.
+6. Keep track of the maximum count of points with the same slope.
+7.Handle coincident points separately by counting them and updating the maximum count accordingly.
+8. Repeat steps 3–7 for all points in the list.
+10. After iterating through all the points, the maximum count of points with the same slope is the answer to the problem.
+
+"""
          
         
     
