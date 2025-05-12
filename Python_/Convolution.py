@@ -22,13 +22,18 @@ output = [
     [0, 0, 0]
 ]
 
-for i in range(len(image)):
-  for j in range(len(image)):
+rows, cols = len(image), len(image)
+
+# op_size = (n-f+2p/s) + 1
+
+op_size = rows - len(kernel) + 1 # 5-3+1 = 2
+for i in range(op_size):
+  for j in range(op_size):
       sum = 0
       for ki in range(len(kernel)):
         for kj in range(len(kernel)):
             sum += image[i + ki][j+kj] * kernel[ki][kj]
-      output[ki][kj] = sum
+      output[i][j] = sum
     
 print(output)
 
