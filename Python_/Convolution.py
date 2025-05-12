@@ -27,7 +27,7 @@ for i in range(len(image)):
       sum = 0
       for ki in range(len(kernel)):
         for kj in range(len(kernel)):
-            sum += image[i + ki][j+kj] * kernel[i][j]
+            sum += image[i + ki][j+kj] * kernel[ki][kj]
       output[ki][kj] = sum
     
 print(output)
