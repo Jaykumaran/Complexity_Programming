@@ -1,5 +1,18 @@
 # https://www.geeksforgeeks.org/count-integral-points-inside-a-triangle/
 
+# Picks theorem
+
+"""
+Pick's Theorem:
+A = I + (B/2) -1
+
+A ==> Area of Polygon
+B ==> Number of integral points on edges of polygon
+I ==> Number of integral points inside the polygon
+
+Using the above formula, we can deduce,
+I = (2A - B + 2) / 2 
+"""
 
 def boundary_points(a, b):
     dx = abs(a[0] - b[0])  # x2 - x1
@@ -20,7 +33,7 @@ def boundary_points(a, b):
     gcd(abs(a[0] - b[0]), abs(a[1] - b[1]))
     """
 def area(p, q, r):  
-    # area of a rectangle
+    # area of a rectangle given three points
     return abs(p[0]*(q[1]-r[1]) + q[0]*(r[1]-p[1]) + r[0]*(p[1]-q[1])) / 2
       
 def count_lattice_points(p, q, r):
