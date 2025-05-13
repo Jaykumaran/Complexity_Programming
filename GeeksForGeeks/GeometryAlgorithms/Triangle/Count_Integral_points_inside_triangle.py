@@ -1,6 +1,6 @@
 # https://www.geeksforgeeks.org/count-integral-points-inside-a-triangle/
 
-# Picks theorem
+# Picks theorem --> Number of points at the boundary and num of points inside the triangle.
 
 """
 Pick's Theorem:
