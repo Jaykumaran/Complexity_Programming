@@ -35,8 +35,14 @@ def boundary_points(a, b):
         
     while dy: # Find GCD by looping until dy becomes 0.
       # dx will hold the final GCD value
+      """
+      Euclidean Algorithm:
+         We start with two numbers (e.g., 15 and 9), and want to reduce them step-by-step.
+         The larger number (dx) is reduced to the smaller one (dy)
+         The smaller one becomes the remainder of the division (dx % dy)
+      """
       new_dx = dy
-      new_dy = dx % dy
+      new_dy = dx % dy # We keep the remainder of dividing the bigger number by the smaller one.
       dx = new_dx
       dy = new_dy
     return dx 
