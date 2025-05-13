@@ -16,18 +16,29 @@ Using the above formula, we can deduce,
 I = (2A - B + 2) / 2 
 """
 
+"""
+    Now dy = 0, so the condition while dy: is no longer true, and the loop stops.
+    Each time we do dx % dy, the result gets smaller than dy.
+    Eventually, one of these divisions will produce 0 as a remainder.
+    When dy = 0, loop ends.
+"""
+
 def boundary_points(a, b):
     dx = abs(a[0] - b[0])  # x2 - x1
     dy = abs(a[1] - b[1])  # y2 - y1
   
     # Count lattice points on the line segment (a, b)
-    if dx == 0:
+    if dx == 0: # vertical (same x points, we need y diff)
        return dy
-    if dy == 0:
-       return dx
-      
-    while dy:
-          dx, dy = dy, dx % dy
+    if dy == 0: # horizontal (same y points, we just need x diff)
+       return dx 
+        
+    while dy: # Find GCD by looping until dy becomes 0.
+      # dx will hold the final GCD value
+      new_dx = dy
+      new_dy = dx % dy
+      dx = new_dx
+      dy = new_dy
     return dx 
       
     """(or) 
