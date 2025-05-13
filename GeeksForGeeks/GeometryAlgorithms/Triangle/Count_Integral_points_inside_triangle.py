@@ -39,6 +39,8 @@ def area(p, q, r):
     return abs(p[0]*(q[1]-r[1]) + q[0]*(r[1]-p[1]) + r[0]*(p[1]-q[1])) / 2
       
 def count_lattice_points(p, q, r):
+    # To count how many lattice (integer-coordinate) points lie on the straight line segment
+    # between two given points a and b, including both endpoints.
     B = boundary_points(p, q) + boundary_points(q, r) + boundary_points(r, p)
     A = area(p, q, r)
     return int(A - B/2 + 1)
