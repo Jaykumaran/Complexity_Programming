@@ -30,9 +30,9 @@ def is_convex(polygon):
         if c != 0:
            if sign is None:
               sign = c > 0
-           elif sign != (c > 0):
+           elif sign != (c > 0):  # non-convex if direction changes
                 return False
-    return True
+    return True # If all turns are consistent, return True.
 
 poly1 = [[0,0], [4,0], [4,4], [0,4]]        # Convex
 poly2 = [[0,0], [4,0], [2,2], [4,4], [0,4]] # Not Convex
