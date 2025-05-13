@@ -3,9 +3,11 @@
 def is_point_in_polygon(x, y, polygon):
     n = len(polygon)  # total number of vertices
     inside = False    # To track if point is inside the polygon
+    k = 0 # intersection count
 
     px1, py1 = polygon[0]  # start with first vertex
-    for i in range(n + 1):  # Loop through each edge (wrap around at the end)
+    for i in range(n + 1):  # +1 for the first point to be included as closure
+        # Loop through each edge (wrap around at the end)
         px2, py2 = polygon[i % n]  # Get the next vertex (modulo wraps to first at the end)
 
         # Check if point y is between the y values of the current edge  
@@ -23,17 +25,19 @@ def is_point_in_polygon(x, y, polygon):
                     # If the point is to the left of the intersection (or on it), flag 'inside'
                     if px1 == px2 or x <= x_intersect:
                         inside = not inside  # Toggle inside status, True
+                        k += 1 # odd or even
 
         # Move to next edge
         px1, py1 = px2, py2
 
-    return inside
+    return inside, k
 
 
 polygon = [(0, 0), (10, 0), (10, 10), (0, 10)]
 point = (5, 5)
 
-print(is_point_in_polygon(point[0], point[1], polygon))  # Output: True
+print(is_point_in_polygon(point[0], point[1], polygon))  
+# True, 1
 
 
       
