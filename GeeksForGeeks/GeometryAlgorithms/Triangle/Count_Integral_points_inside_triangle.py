@@ -10,6 +10,8 @@ A ==> Area of Polygon
 B ==> Number of integral points on edges of polygon
 I ==> Number of integral points inside the polygon
 
+We can find A using usual area of tri formula given three points.
+
 Using the above formula, we can deduce,
 I = (2A - B + 2) / 2 
 """
