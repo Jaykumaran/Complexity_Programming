@@ -30,6 +30,7 @@ def is_convex(polygon):
         if c != 0:
            if sign is None:
               sign = c > 0
+              print(sign)
            elif sign != (c > 0):  # non-convex if direction changes
                 return False
     return True # If all turns are consistent, return True.
