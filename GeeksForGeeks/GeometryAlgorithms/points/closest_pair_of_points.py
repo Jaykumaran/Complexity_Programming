@@ -17,6 +17,7 @@ def closest_pair(points):
    def distance(a,b): # Euclidean distance
        return math.hypot(a[0]-b[0], a[1]-b[1])
 
+   # recursively solve
    def solve(pts):
        # For 2 or 3 points, just check all pairs and return the minimum distance and the pair.
        if len(pts) <= 3: # Use brute force when <= 3
