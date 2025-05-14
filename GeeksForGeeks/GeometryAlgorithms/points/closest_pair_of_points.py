@@ -38,7 +38,7 @@ def closest_pair(points):
 
         for i in range(len(strip)):
             for j in range(i+1, len(strip)):
-                if strip[j][i] - strip[i][1] >= d:
+                if strip[j][1] - strip[i][1] >= d:
                     break
                 new_d = distance(strip[i], strip[j])
                 if new_d < d:
