@@ -29,8 +29,8 @@ def convex_hull(points):
         while len(upper) >= 2 and cross(upper[-2], upper[-1], p) <= 0:
             upper.pop()
         upper.append(p)
-
-    return lower[:-1] + upper[:-1]
+  
+    return lower[:-1] + upper[:-1]  # remove the last point from both lower and upper because it's duplicated (start and end point are the same)
 
 
 
