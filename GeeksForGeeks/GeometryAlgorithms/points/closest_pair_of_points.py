@@ -33,7 +33,9 @@ def closest_pair(points):
         d, best_pair = min((d1, p1), (d2, p2))
 
         mx = pts[mid][0]
-        strip = [p for p in points if abs(p[0] - mx) < d]
+        """Is there a pair of points, one from the left half and one from the right half, that are closer than d? If such a pair exists, 
+        it must be the true closest pair overall for this set of pts. This is what the "strip" logic aims to find."""
+        strip = [p for p in pts if abs(p[0] - mx) < d]
         strip.sort(key = lambda p: p[1])
 
         for i in range(len(strip)):
