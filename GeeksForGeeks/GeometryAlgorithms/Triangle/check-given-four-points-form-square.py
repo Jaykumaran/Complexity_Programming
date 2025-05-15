@@ -1,12 +1,9 @@
 # https://www.geeksforgeeks.org/check-given-four-points-form-square/
 
-
 """
-All sides equal.
-
-Diagonals equal.
-
-All angles are 90° (via dot product).
+**All sides equal.
+**Diagonals equal.
+** All angles are 90° (via dot product).
 If the dot product of two vectors(coords) is 0, it means the vectors are perpendicular.
 Eg: in <ABC, AB and BC are perp if their slope is 0
 """
@@ -34,6 +31,9 @@ def is_square(p1, p2, p3, p4):
     if dist2(a, b) == dist2(b, c) == dist2(c, d) == dist2(d, a) > 0 \
         and dist2(a, c) == dist2(b, d) \
         and dot(a, b, c) == 0:
+            # **All sides equal.
+            # **Diagonals equal.
+            # **All angles are 90° (via dot product).
             return True
   return False
 
