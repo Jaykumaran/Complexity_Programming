@@ -1,6 +1,10 @@
 # Finding the Convex Hull of a set of 2D points, and updating it when a point is removed.
 
-# Graham Scan 
+
+# https://youtu.be/8foCOARqH8A?feature=shared
+
+# Andrew’s monotone chain algorithm which is simple version of Graham scan
+
 # tell us the turn direction 
 def cross(o, a, b):
     """
