@@ -1,7 +1,7 @@
 """
 Line 1: a1*x + b1*y = c1  
 Line 2: a2*x + b2*y = c2
-
+"""
 
 def find_intersection(a1, b1, c1, a2, b2, c2):
 
@@ -43,5 +43,4 @@ intersection = find_intersection(a1, b1, c1, a2, b2, c2)
 
       y = det([[a1, c1],
                [a2, c2]]) / Det
-"""
 
